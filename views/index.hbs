@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mach deine URLs knapp</title>
+    <!-- <script type="txt/javascript" src="index.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+<body>
+<h1 class="hero">shorty.ch</h1>
+
+<input id="code" value="{{code}}" name="code" title="Click to copy to clipboard">
+<form class="center" method="post" action="/" id="main-form">
+    <div id="oldUrl">{{url}}</div>
+    <div id="error"></div>
+    <div class="input-main">
+        <input id="url-input" type="url" placeholder="Enter your looooooooong URL" autofocus inputmode="url" required/>
+    </div>
+    <button id="options-button" type="button">▽ More options ▽</button>
+    <div id="options" class="toggle-display">
+        <div class="input-option">
+            <p class="customize">Speziell anfertigen Ihre URL (optional):</p>
+            <p class="inline">https://shorty.ch/</p>
+            <input id="custom-input" type="text" placeholder="custom input" name="custom-input"/>
+        </div>
+        <div class="input-date">
+            <label class="inline" for="start-date">Valid from:</label>
+            <input type="date" id="start-date" name="start-date"/>
+            <label class="inline" for="start-time">at</label>
+            <input type="time" id="start-time" value="00:00" name="start-time"/>
+            <br/>
+            <label class="inline" for="end-date">Valid to:</label>
+            <input type="date" id="end-date" name="end-date"/>
+            <label class="inline" for="end-time">at</label>
+            <input type="time" id="end-time" value="00:00" name="end-time"/>
+        </div>
+    </div>
+    <div class="input-submit">
+        <button id="submit-button" type="submit" value="">Verkürzen</button>
+    </div>
+</form>
+<script src="/js/script.js"></script>
+</body>
+</html>
