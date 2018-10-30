@@ -19,3 +19,9 @@
 * codes: id, code - for every number we will create his pair code       1,99999
 * urls: id,url,dateFrom,dateTo, customUrl/code - then we will get code for same id if exist
 
+
+# Installation
+If you running code for the first time, create database with name "url_shortener" then run following commands:
+
+    nodejs src/init.js
+    nodejs src/generate.js
