@@ -8,12 +8,10 @@ const ua = require("universal-analytics");
 router.get("/", (req, res) => {
     res.render("index", {title: "Home"});
 });
-router.get("/initSDatabases", (req, res) => {
-    res.render("index", {title: "Home"});
-});
 router.get("/:code([a-zA-Z0-9]{4,10})", (req, res) => {
     const code = req.params.code;
     con.query("SELECT * FROM urls WHERE code=? LIMIT 1", [code], (err, rows) => {
+
         if(err) {
             throw err;
         } else {
@@ -47,8 +45,8 @@ router.get("/:code([a-zA-Z0-9]{4,10})", (req, res) => {
                     // todo - check if we need to add ,qt: 50, sc: "end" */
                 };
                 visitor.pageview(params).send();
-                res.send("a");
-                //res.redirect(row.url);
+                //res.send("a");
+                res.redirect(row.url);
             }
         }
     });
